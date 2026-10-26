@@ -61,14 +61,16 @@ class ZaloContact {
           default: '',
           required: true,
           displayOptions: {
-            show: [
-              'getProfile',
-              'friendStatus',
-              'acceptFriendRequest',
-              'removeFriend',
-              'blockUser',
-              'unblockUser',
-            ],
+            show: {
+              operation: [
+                'getProfile',
+                'friendStatus',
+                'acceptFriendRequest',
+                'removeFriend',
+                'blockUser',
+                'unblockUser',
+              ],
+            },
           },
           description: 'UID người dùng Zalo',
         },
