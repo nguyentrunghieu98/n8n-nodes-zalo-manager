@@ -235,7 +235,7 @@ Mẫu JSON: [`examples/workflow.example.json`](examples/workflow.example.json).
 ## Phát triển cục bộ
 
 ```bash
-git clone https://github.com/your-username/n8n-nodes-zalo-manager.git
+git clone https://github.com/nguyentrunghieu98/n8n-nodes-zalo-manager.git
 cd n8n-nodes-zalo-manager
 npm install
 npm test
@@ -254,7 +254,7 @@ docker restart <container>
 
 ## Đẩy lên GitHub
 
-Trước khi push, sửa `author.name` và `repository.url` trong `package.json`, cùng `your-username` trong README.
+Trước khi push, sửa `author.name` và `repository.url` trong `package.json`, cùng `nguyentrunghieu98` trong README.
 
 ```bash
 cd n8n-nodes-zalo-manager

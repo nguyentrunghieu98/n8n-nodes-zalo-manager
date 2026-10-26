@@ -12,11 +12,12 @@
   ],
   "license": "MIT",
   "author": {
-    "name": "Your Name"
+    "name": "nguyentrunghieu98",
+    "url": "https://github.com/nguyentrunghieu98"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/n8n-nodes-zalo-manager.git"
+    "url": "https://github.com/nguyentrunghieu98/n8n-nodes-zalo-manager.git"
   },
   "main": "index.js",
   "files": [
