@@ -232,58 +232,9 @@ Mẫu JSON: [`examples/workflow.example.json`](examples/workflow.example.json).
 
 ---
 
-## Phát triển cục bộ
+## Đóng góp
 
-```bash
-git clone https://github.com/nguyentrunghieu98/n8n-nodes-zalo-manager.git
-cd n8n-nodes-zalo-manager
-npm install
-npm test
-```
-
-Thử trong n8n Docker:
-
-```bash
-npm pack
-docker cp n8n-nodes-zalo-manager-0.3.2.tgz <container>:/tmp/
-docker exec -u node <container> sh -c "cd /home/node/.n8n/nodes && npm install /tmp/n8n-nodes-zalo-manager-0.3.2.tgz --legacy-peer-deps --ignore-scripts"
-docker restart <container>
-```
-
----
-
-## Đẩy lên GitHub
-
-Trước khi push, sửa `author.name` và `repository.url` trong `package.json`, cùng `nguyentrunghieu98` trong README.
-
-```bash
-cd n8n-nodes-zalo-manager
-git init
-git add .
-git commit -m "feat: bộ node quản lý Zalo cá nhân cho n8n"
-git branch -M main
-git remote add origin https://github.com/<tai-khoan>/n8n-nodes-zalo-manager.git
-git push -u origin main
-```
-
-Kiểm tra không có file phiên, cookie, token hay dữ liệu thật trước khi push.
-
----
-
-## Đăng lên npm
-
-```bash
-npm login
-npm view n8n-nodes-zalo-manager     # 404 = tên còn trống
-npm publish --access public
-npm view n8n-nodes-zalo-manager version
-```
-
-- Mỗi lần sửa code phải tăng `version` trước khi publish lại.
-- Nếu dùng scope, vẫn cần `--access public`.
-- Sau khi publish, cài trong n8n qua **Settings → Community nodes**.
-
----
+Mở issue hoặc pull request tại [GitHub repository](https://github.com/nguyentrunghieu98/n8n-nodes-zalo-manager).
 
 ## Giấy phép và logo
 
