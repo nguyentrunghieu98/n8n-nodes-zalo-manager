@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-zalo-manager",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Bộ node n8n quản lý nhiều tài khoản Zalo cá nhân: phiên QR, danh bạ, tin nhắn và lời mời kết bạn (không chính thức).",
   "keywords": [
     "n8n-community-node-package",
