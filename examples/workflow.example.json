@@ -1,0 +1,132 @@
+{
+  "name": "Zalo Manager - ví dụ tối giản",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual1",
+      "name": "Chạy tay",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "status",
+        "saleCode": "108279"
+      },
+      "id": "session1",
+      "name": "Zalo Session",
+      "type": "n8n-nodes-zalo-manager.zaloSession",
+      "typeVersion": 1,
+      "position": [
+        240,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "findUser",
+        "saleCode": "108279",
+        "phone": "0900000000"
+      },
+      "id": "contact1",
+      "name": "Zalo Contact",
+      "type": "n8n-nodes-zalo-manager.zaloContact",
+      "typeVersion": 1,
+      "position": [
+        480,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "saleCode": "108279",
+        "phone": "0900000000",
+        "message": "Xin chào, đây là lời mời kết bạn mẫu.",
+        "requestId": "RUN-EXAMPLE-001",
+        "options": {
+          "dryRun": true,
+          "allowlist": "0900000000",
+          "dailyLimit": 29,
+          "minIntervalSec": 120,
+          "maxIntervalSec": 180
+        }
+      },
+      "id": "invite1",
+      "name": "Zalo Invite",
+      "type": "n8n-nodes-zalo-manager.zaloInvite",
+      "typeVersion": 1,
+      "position": [
+        720,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "saleCode": "108279",
+        "text": "Cảm ơn anh/chị đã kết bạn."
+      },
+      "id": "message1",
+      "name": "Zalo Message",
+      "type": "n8n-nodes-zalo-manager.zaloMessage",
+      "typeVersion": 1,
+      "position": [
+        960,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Chạy tay": {
+      "main": [
+        [
+          {
+            "node": "Zalo Session",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zalo Session": {
+      "main": [
+        [
+          {
+            "node": "Zalo Contact",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zalo Contact": {
+      "main": [
+        [
+          {
+            "node": "Zalo Invite",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zalo Invite": {
+      "main": [
+        [
+          {
+            "node": "Zalo Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
