@@ -1,0 +1,53 @@
+{
+  "name": "n8n-nodes-zalo-manager",
+  "version": "0.3.2",
+  "description": "Bộ node n8n quản lý nhiều tài khoản Zalo cá nhân: phiên QR, danh bạ, tin nhắn và lời mời kết bạn (không chính thức).",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "zalo",
+    "zalo-personal",
+    "zalo-session",
+    "friend-request"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Your Name"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/n8n-nodes-zalo-manager.git"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "nodes",
+    "lib",
+    "icons",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node -e \"console.log('No build step: package ships plain JavaScript files.')\"",
+    "test": "node --test test/*.test.js"
+  },
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [],
+    "nodes": [
+      "nodes/ZaloSession.node.js",
+      "nodes/ZaloContact.node.js",
+      "nodes/ZaloMessage.node.js",
+      "nodes/ZaloInvite.node.js"
+    ]
+  },
+  "dependencies": {
+    "zca-js": "^2.2.0"
+  },
+  "peerDependencies": {
+    "n8n-workflow": ">=1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,0 +1,11 @@
+node_modules/
+*.tgz
+*.log
+.env
+.env.*
+sessions/
+*.session.json
+coverage/
+.DS_Store
+.idea/
+.vscode/
